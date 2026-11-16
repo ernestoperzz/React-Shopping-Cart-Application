@@ -1,4 +1,4 @@
-const products = [
+const Products = [
 {
 id : 1,
 name: "Laptop",
@@ -43,4 +43,4 @@ category: "Accesories"
 },
 ];
 
-export default products;
+export default Products;

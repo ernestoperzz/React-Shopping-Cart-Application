@@ -1,0 +1,64 @@
+/* Container that holds all the cards in a row and wraps to new lines */
+.productList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Each product is its own flex item, laid out as a column inside */
+.productCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    gap: 8px;
+    flex: 0 1 300px;          /* each card is about 300px wide */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.productCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* Put name, price and category on their own lines, aligned left.
+   This also works if the spans are still wrapped in a <dt>. */
+.productCard dt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.productCard span {
+    display: block;
+    text-align: left;
+}
+
+.productName {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.productPrice {
+    font-size: 1.1rem;
+    color: #2e8b57;
+    font-weight: 600;
+}
+
+.productCategory {
+    font-size: 0.85rem;
+    color: #666;
+    background-color: #f1f1f1;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
